@@ -1,6 +1,6 @@
 # Add the kubelet flags - CPU Manager Policy and Topology Manager Policy
 
-### This will allow you to change all the nodes of your cluster to change the CPU Manager and Topology Manager policies to static into an existing AKS cluster
+### This will allow you to change the CPU Manager and Topology Manager policies to "static" and "best-effort" respectively to *all the nodes* in an existing AKS cluster
 
 Run the following commands to apply the changes on all the nodes.
 
