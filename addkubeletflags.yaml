@@ -26,7 +26,7 @@ spec:
           name: host-root
         command: ["/bin/sh", "-c"]
         args:
-          - chroot /host /bin/bash -c "sed -i '/KUBELET_FLAGS/s/$/--cpu-manager-policy=static --topology-manager-policy=best-effort/' /etc/default/kubelet ; rm /var/lib/kubelet/cpu_manager_state ; service kubelet restart ; sleep infinity"
+          - chroot /host /bin/bash -c "sed -i '/KUBELET_FLAGS/s/$/ --cpu-manager-policy=static --topology-manager-policy=best-effort/' /etc/default/kubelet ; rm /var/lib/kubelet/cpu_manager_state ; service kubelet restart ; sleep infinity"
         securityContext:
           privileged: true
       hostIPC: true
